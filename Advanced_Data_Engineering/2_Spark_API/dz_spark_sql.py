@@ -81,6 +81,8 @@ result_3 = df_last_week_march_rus.withColumn(
 path = f'{os.getcwd()}/results/'
 
 for n, item in enumerate([result_1, result_2, result_3]):
-    item.write.csv(f'{path}result_{n + 1}_{datetime.now().date()}')
+    item.write.option(
+        'header',
+        True).csv(f'{path}result_{n + 1}_{datetime.now().date()}')
 
 spark.stop()
