@@ -10,6 +10,8 @@
 - Kafka Streams DSL
 - Kafka Streams
 - Kafka Connect Datagen
+- Docker with Kafka cluster
+- Conduktor
 
 ### Результат работы программы
 ![Результата работы программы](https://github.com/msavilov/Data_engineering/blob/main/Data_streaming/2_Kafka_Stream/DSL_screen.png)
