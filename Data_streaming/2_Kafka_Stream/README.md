@@ -11,4 +11,4 @@
 - Kafka Connect Datagen
 
 ### Результат работы программы
-![Результата работы программы]()
+![Результата работы программы](https://github.com/msavilov/Data_engineering/blob/main/Data_streaming/2_Kafka_Stream/DSL_screen.png)
