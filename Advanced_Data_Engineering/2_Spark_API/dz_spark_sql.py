@@ -19,6 +19,7 @@ df = (
     csv('owid-covid-data.csv')
 )
 
+
 # Task_1
 date = '2021-03-31'
 
@@ -59,7 +60,6 @@ result_2 = df_last_week_march.withColumn(
 
 
 # Task_3
-
 df_last_week_march_rus = df.select(
     'date',
     (col('new_cases').alias('today_new_cases')),
@@ -77,12 +77,12 @@ result_3 = df_last_week_march_rus.withColumn(
 
 
 # Save results
-
 path = f'{os.getcwd()}/results/'
 
 for n, item in enumerate([result_1, result_2, result_3]):
     item.write.option(
-        'header',
-        True).csv(f'{path}result_{n + 1}_{datetime.now().date()}')
+        'header',True).csv(
+            f'{path}result_{n + 1}_{datetime.now().date()}')
+
 
 spark.stop()
