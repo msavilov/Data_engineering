@@ -1,0 +1,323 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load .dockerignore
+#1 transferring context: 2B 0.0s done
+#1 DONE 0.1s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 294B 0.0s done
+#2 DONE 0.1s
+
+#3 [internal] load metadata for docker.io/continuumio/miniconda3:latest
+#3 ...
+
+#4 [auth] continuumio/miniconda3:pull token for registry-1.docker.io
+#4 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/continuumio/miniconda3:latest
+#3 DONE 1.6s
+
+#5 [1/8] FROM docker.io/continuumio/miniconda3:latest@sha256:5ee0ed861bce8f67acb0a3e8a416891781db54302d93bf20a3c6301d7683d7b9
+#5 CACHED
+
+#6 [internal] load build context
+#6 transferring context: 25B 0.0s done
+#6 DONE 0.0s
+
+#7 [2/8] RUN mkdir /app
+#7 DONE 0.9s
+
+#8 [3/8] WORKDIR /app
+#8 DONE 0.1s
+
+#9 [4/8] COPY ./1.sh /app
+#9 DONE 0.1s
+
+#10 [5/8] RUN chmod +x 1.sh
+#10 DONE 0.5s
+
+#11 [6/8] RUN conda config --append channels conda-forge
+#11 DONE 1.7s
+
+#12 [7/8] RUN conda install python mlflow boto3 pymysql
+#12 2.134 Channels:
+#12 2.134  - defaults
+#12 2.134  - conda-forge
+#12 2.134 Platform: linux-64
+#12 2.134 Collecting package metadata (repodata.json): ...working... done
+#12 266.6 Solving environment: ...working... done
+#12 310.4 
+#12 310.4 ## Package Plan ##
+#12 310.4 
+#12 310.4   environment location: /opt/conda
+#12 310.4 
+#12 310.4   added / updated specs:
+#12 310.4     - boto3
+#12 310.4     - mlflow
+#12 310.4     - pymysql
+#12 310.4     - python
+#12 310.4 
+#12 310.4 
+#12 310.4 The following packages will be downloaded:
+#12 310.4 
+#12 310.4     package                    |            build
+#12 310.4     ---------------------------|-----------------
+#12 310.4     abseil-cpp-20211102.0      |       hd4dd3e8_0        1020 KB
+#12 310.4     alembic-1.8.1              |  py311h06a4308_0         379 KB
+#12 310.4     appdirs-1.4.4              |     pyhd3eb1b0_0          12 KB
+#12 310.4     arrow-cpp-11.0.0           |       h374c478_2        10.2 MB
+#12 310.4     asn1crypto-1.5.1           |  py311h06a4308_0         220 KB
+#12 310.4     aws-c-common-0.6.8         |       h5eee18b_1         177 KB
+#12 310.4     aws-c-event-stream-0.1.6   |       h6a678d5_6          25 KB
+#12 310.4     aws-checksums-0.1.11       |       h5eee18b_2          48 KB
+#12 310.4     aws-sdk-cpp-1.8.185        |       h721c034_1         2.2 MB
+#12 310.4     blas-1.0                   |              mkl           6 KB
+#12 310.4     blinker-1.6.2              |  py311h06a4308_0          33 KB
+#12 310.4     boost-cpp-1.82.0           |       hdb19cb5_2          11 KB
+#12 310.4     boto3-1.29.1               |  py311h06a4308_0         154 KB
+#12 310.4     botocore-1.32.1            |  py311h06a4308_0         7.1 MB
+#12 310.4     bottleneck-1.3.5           |  py311hbed6279_0         133 KB
+#12 310.4     brotli-1.0.9               |       h5eee18b_7          18 KB
+#12 310.4     brotli-bin-1.0.9           |       h5eee18b_7          19 KB
+#12 310.4     certifi-2023.11.17         |  py311h06a4308_0         159 KB
+#12 310.4     click-8.1.7                |  py311h06a4308_0         221 KB
+#12 310.4     cloudpickle-2.2.1          |  py311h06a4308_0          51 KB
+#12 310.4     contourpy-1.2.0            |  py311hdb19cb5_0         263 KB
+#12 310.4     cycler-0.11.0              |     pyhd3eb1b0_0          12 KB
+#12 310.4     databricks-cli-0.17.6      |  py311h06a4308_1         231 KB
+#12 310.4     docker-py-4.4.1            |  py311h06a4308_5         236 KB
+#12 310.4     docker-pycreds-0.4.0       |     pyhd3eb1b0_0          12 KB
+#12 310.4     entrypoints-0.4            |  py311h06a4308_0          17 KB
+#12 310.4     flask-2.2.2                |  py311h06a4308_0         177 KB
+#12 310.4     fonttools-4.25.0           |     pyhd3eb1b0_0         632 KB
+#12 310.4     freetype-2.12.1            |       h4a9f257_0         626 KB
+#12 310.4     gflags-2.2.2               |       he6710b0_0         126 KB
+#12 310.4     giflib-5.2.1               |       h5eee18b_3          80 KB
+#12 310.4     gitdb-4.0.7                |     pyhd3eb1b0_0          50 KB
+#12 310.4     gitpython-3.1.37           |  py311h06a4308_0         359 KB
+#12 310.4     glog-0.5.0                 |       h2531618_0         101 KB
+#12 310.4     greenlet-2.0.1             |  py311h6a678d5_0         205 KB
+#12 310.4     grpc-cpp-1.48.2            |       he1ff14a_1         4.8 MB
+#12 310.4     gunicorn-20.1.0            |  py311h06a4308_0         167 KB
+#12 310.4     importlib-metadata-6.0.0   |  py311h06a4308_0          46 KB
+#12 310.4     intel-openmp-2023.1.0      |   hdb19cb5_46306        17.2 MB
+#12 310.4     itsdangerous-2.0.1         |     pyhd3eb1b0_0          18 KB
+#12 310.4     jinja2-3.1.2               |  py311h06a4308_0         295 KB
+#12 310.4     jmespath-1.0.1             |  py311h06a4308_0          48 KB
+#12 310.4     joblib-1.2.0               |  py311h06a4308_0         527 KB
+#12 310.4     jpeg-9e                    |       h5eee18b_1         262 KB
+#12 310.4     kiwisolver-1.4.4           |  py311h6a678d5_0          70 KB
+#12 310.4     lcms2-2.12                 |       h3be6417_0         312 KB
+#12 310.4     lerc-3.0                   |       h295c915_0         196 KB
+#12 310.4     libboost-1.82.0            |       h109eef0_2        19.5 MB
+#12 310.4     libbrotlicommon-1.0.9      |       h5eee18b_7          70 KB
+#12 310.4     libbrotlidec-1.0.9         |       h5eee18b_7          31 KB
+#12 310.4     libbrotlienc-1.0.9         |       h5eee18b_7         264 KB
+#12 310.4     libdeflate-1.17            |       h5eee18b_1          64 KB
+#12 310.4     libevent-2.1.12            |       hdbd6064_1         453 KB
+#12 310.4     libgfortran-ng-11.2.0      |       h00389a5_1          20 KB
+#12 310.4     libgfortran5-11.2.0        |       h1234567_1         2.0 MB
+#12 310.4     libpng-1.6.39              |       h5eee18b_0         304 KB
+#12 310.4     libprotobuf-3.20.3         |       he621ea3_0         2.4 MB
+#12 310.4     libthrift-0.15.0           |       h1795dd8_2         4.0 MB
+#12 310.4     libtiff-4.5.1              |       h6a678d5_0         533 KB
+#12 310.4     libwebp-1.3.2              |       h11a3e52_0          87 KB
+#12 310.4     libwebp-base-1.3.2         |       h5eee18b_0         387 KB
+#12 310.4     mako-1.2.3                 |  py311h06a4308_0         171 KB
+#12 310.4     markdown-3.4.1             |  py311h06a4308_0         164 KB
+#12 310.4     markupsafe-2.1.1           |  py311h5eee18b_0          25 KB
+#12 310.4     matplotlib-base-3.8.0      |  py311ha02d727_0         7.7 MB
+#12 310.4     mkl-2023.1.0               |   h213fc3f_46344       171.5 MB
+#12 310.4     mkl-service-2.4.0          |  py311h5eee18b_1          54 KB
+#12 310.4     mkl_fft-1.3.8              |  py311h5eee18b_0         225 KB
+#12 310.4     mkl_random-1.2.4           |  py311hdb19cb5_0         316 KB
+#12 310.4     mlflow-2.6.0               |  py311h0389eee_0        15.7 MB
+#12 310.4     munkres-1.1.4              |             py_0          13 KB
+#12 310.4     numexpr-2.8.7              |  py311h65dcdc2_0         167 KB
+#12 310.4     numpy-1.24.3               |  py311h08b1b3b_1          11 KB
+#12 310.4     numpy-base-1.24.3          |  py311hf175353_1         7.2 MB
+#12 310.4     oauthlib-3.2.2             |  py311h06a4308_0         245 KB
+#12 310.4     openjpeg-2.4.0             |       h3ad879b_0         331 KB
+#12 310.4     orc-1.7.4                  |       hb3bc3d3_1         972 KB
+#12 310.4     pandas-2.1.1               |  py311ha02d727_0        14.9 MB
+#12 310.4     pillow-10.0.1              |  py311ha6cbd5a_0         896 KB
+#12 310.4     protobuf-3.20.3            |  py311h6a678d5_0         364 KB
+#12 310.4     pyarrow-11.0.0             |  py311hd8e8d9b_1         4.2 MB
+#12 310.4     pyjwt-2.4.0                |  py311h06a4308_0          44 KB
+#12 310.4     pymysql-1.0.2              |  py311h06a4308_1          98 KB
+#12 310.4     pyparsing-3.0.9            |  py311h06a4308_0         204 KB
+#12 310.4     python-dateutil-2.8.2      |     pyhd3eb1b0_0         233 KB
+#12 310.4     python-tzdata-2023.3       |     pyhd3eb1b0_0         140 KB
+#12 310.4     pytz-2023.3.post1          |  py311h06a4308_0         216 KB
+#12 310.4     pyyaml-6.0.1               |  py311h5eee18b_0         210 KB
+#12 310.4     querystring_parser-1.2.4   |  py311h06a4308_0          21 KB
+#12 310.4     re2-2022.04.01             |       h295c915_0         210 KB
+#12 310.4     s3transfer-0.7.0           |  py311h06a4308_0         142 KB
+#12 310.4     scikit-learn-1.3.0         |  py311ha02d727_0         9.5 MB
+#12 310.4     scipy-1.11.3               |  py311h08b1b3b_0        22.0 MB
+#12 310.4     six-1.16.0                 |     pyhd3eb1b0_1          18 KB
+#12 310.4     smmap-4.0.0                |     pyhd3eb1b0_0          23 KB
+#12 310.4     snappy-1.1.9               |       h295c915_0         636 KB
+#12 310.4     sqlalchemy-2.0.21          |  py311h5eee18b_0         3.8 MB
+#12 310.4     sqlparse-0.4.4             |  py311h06a4308_0          96 KB
+#12 310.4     tabulate-0.9.0             |  py311h06a4308_0          70 KB
+#12 310.4     tbb-2021.8.0               |       hdb19cb5_0         1.6 MB
+#12 310.4     threadpoolctl-2.2.0        |     pyh0d69192_0          16 KB
+#12 310.4     typing-extensions-4.7.1    |  py311h06a4308_0           9 KB
+#12 310.4     typing_extensions-4.7.1    |  py311h06a4308_0          73 KB
+#12 310.4     utf8proc-2.6.1             |       h27cfd23_0         308 KB
+#12 310.4     websocket-client-0.58.0    |  py311h06a4308_4          87 KB
+#12 310.4     werkzeug-2.2.3             |  py311h06a4308_0         454 KB
+#12 310.4     yaml-0.2.5                 |       h7b6447c_0          75 KB
+#12 310.4     zipp-3.11.0                |  py311h06a4308_0          21 KB
+#12 310.4     ------------------------------------------------------------
+#12 310.4                                            Total:       344.3 MB
+#12 310.4 
+#12 310.4 The following NEW packages will be INSTALLED:
+#12 310.4 
+#12 310.4   abseil-cpp         pkgs/main/linux-64::abseil-cpp-20211102.0-hd4dd3e8_0 
+#12 310.4   alembic            pkgs/main/linux-64::alembic-1.8.1-py311h06a4308_0 
+#12 310.4   appdirs            pkgs/main/noarch::appdirs-1.4.4-pyhd3eb1b0_0 
+#12 310.4   arrow-cpp          pkgs/main/linux-64::arrow-cpp-11.0.0-h374c478_2 
+#12 310.4   asn1crypto         pkgs/main/linux-64::asn1crypto-1.5.1-py311h06a4308_0 
+#12 310.4   aws-c-common       pkgs/main/linux-64::aws-c-common-0.6.8-h5eee18b_1 
+#12 310.4   aws-c-event-stream pkgs/main/linux-64::aws-c-event-stream-0.1.6-h6a678d5_6 
+#12 310.4   aws-checksums      pkgs/main/linux-64::aws-checksums-0.1.11-h5eee18b_2 
+#12 310.4   aws-sdk-cpp        pkgs/main/linux-64::aws-sdk-cpp-1.8.185-h721c034_1 
+#12 310.4   blas               pkgs/main/linux-64::blas-1.0-mkl 
+#12 310.4   blinker            pkgs/main/linux-64::blinker-1.6.2-py311h06a4308_0 
+#12 310.4   boost-cpp          pkgs/main/linux-64::boost-cpp-1.82.0-hdb19cb5_2 
+#12 310.4   boto3              pkgs/main/linux-64::boto3-1.29.1-py311h06a4308_0 
+#12 310.4   botocore           pkgs/main/linux-64::botocore-1.32.1-py311h06a4308_0 
+#12 310.4   bottleneck         pkgs/main/linux-64::bottleneck-1.3.5-py311hbed6279_0 
+#12 310.4   brotli             pkgs/main/linux-64::brotli-1.0.9-h5eee18b_7 
+#12 310.4   brotli-bin         pkgs/main/linux-64::brotli-bin-1.0.9-h5eee18b_7 
+#12 310.4   click              pkgs/main/linux-64::click-8.1.7-py311h06a4308_0 
+#12 310.4   cloudpickle        pkgs/main/linux-64::cloudpickle-2.2.1-py311h06a4308_0 
+#12 310.4   contourpy          pkgs/main/linux-64::contourpy-1.2.0-py311hdb19cb5_0 
+#12 310.4   cycler             pkgs/main/noarch::cycler-0.11.0-pyhd3eb1b0_0 
+#12 310.4   databricks-cli     pkgs/main/linux-64::databricks-cli-0.17.6-py311h06a4308_1 
+#12 310.4   docker-py          pkgs/main/linux-64::docker-py-4.4.1-py311h06a4308_5 
+#12 310.4   docker-pycreds     pkgs/main/noarch::docker-pycreds-0.4.0-pyhd3eb1b0_0 
+#12 310.4   entrypoints        pkgs/main/linux-64::entrypoints-0.4-py311h06a4308_0 
+#12 310.4   flask              pkgs/main/linux-64::flask-2.2.2-py311h06a4308_0 
+#12 310.4   fonttools          pkgs/main/noarch::fonttools-4.25.0-pyhd3eb1b0_0 
+#12 310.4   freetype           pkgs/main/linux-64::freetype-2.12.1-h4a9f257_0 
+#12 310.4   gflags             pkgs/main/linux-64::gflags-2.2.2-he6710b0_0 
+#12 310.4   giflib             pkgs/main/linux-64::giflib-5.2.1-h5eee18b_3 
+#12 310.4   gitdb              pkgs/main/noarch::gitdb-4.0.7-pyhd3eb1b0_0 
+#12 310.4   gitpython          pkgs/main/linux-64::gitpython-3.1.37-py311h06a4308_0 
+#12 310.4   glog               pkgs/main/linux-64::glog-0.5.0-h2531618_0 
+#12 310.4   greenlet           pkgs/main/linux-64::greenlet-2.0.1-py311h6a678d5_0 
+#12 310.4   grpc-cpp           pkgs/main/linux-64::grpc-cpp-1.48.2-he1ff14a_1 
+#12 310.4   gunicorn           pkgs/main/linux-64::gunicorn-20.1.0-py311h06a4308_0 
+#12 310.4   importlib-metadata pkgs/main/linux-64::importlib-metadata-6.0.0-py311h06a4308_0 
+#12 310.4   intel-openmp       pkgs/main/linux-64::intel-openmp-2023.1.0-hdb19cb5_46306 
+#12 310.4   itsdangerous       pkgs/main/noarch::itsdangerous-2.0.1-pyhd3eb1b0_0 
+#12 310.4   jinja2             pkgs/main/linux-64::jinja2-3.1.2-py311h06a4308_0 
+#12 310.4   jmespath           pkgs/main/linux-64::jmespath-1.0.1-py311h06a4308_0 
+#12 310.4   joblib             pkgs/main/linux-64::joblib-1.2.0-py311h06a4308_0 
+#12 310.4   jpeg               pkgs/main/linux-64::jpeg-9e-h5eee18b_1 
+#12 310.4   kiwisolver         pkgs/main/linux-64::kiwisolver-1.4.4-py311h6a678d5_0 
+#12 310.4   lcms2              pkgs/main/linux-64::lcms2-2.12-h3be6417_0 
+#12 310.4   lerc               pkgs/main/linux-64::lerc-3.0-h295c915_0 
+#12 310.4   libboost           pkgs/main/linux-64::libboost-1.82.0-h109eef0_2 
+#12 310.4   libbrotlicommon    pkgs/main/linux-64::libbrotlicommon-1.0.9-h5eee18b_7 
+#12 310.4   libbrotlidec       pkgs/main/linux-64::libbrotlidec-1.0.9-h5eee18b_7 
+#12 310.4   libbrotlienc       pkgs/main/linux-64::libbrotlienc-1.0.9-h5eee18b_7 
+#12 310.4   libdeflate         pkgs/main/linux-64::libdeflate-1.17-h5eee18b_1 
+#12 310.4   libevent           pkgs/main/linux-64::libevent-2.1.12-hdbd6064_1 
+#12 310.4   libgfortran-ng     pkgs/main/linux-64::libgfortran-ng-11.2.0-h00389a5_1 
+#12 310.4   libgfortran5       pkgs/main/linux-64::libgfortran5-11.2.0-h1234567_1 
+#12 310.4   libpng             pkgs/main/linux-64::libpng-1.6.39-h5eee18b_0 
+#12 310.4   libprotobuf        pkgs/main/linux-64::libprotobuf-3.20.3-he621ea3_0 
+#12 310.4   libthrift          pkgs/main/linux-64::libthrift-0.15.0-h1795dd8_2 
+#12 310.4   libtiff            pkgs/main/linux-64::libtiff-4.5.1-h6a678d5_0 
+#12 310.4   libwebp            pkgs/main/linux-64::libwebp-1.3.2-h11a3e52_0 
+#12 310.4   libwebp-base       pkgs/main/linux-64::libwebp-base-1.3.2-h5eee18b_0 
+#12 310.4   mako               pkgs/main/linux-64::mako-1.2.3-py311h06a4308_0 
+#12 310.4   markdown           pkgs/main/linux-64::markdown-3.4.1-py311h06a4308_0 
+#12 310.4   markupsafe         pkgs/main/linux-64::markupsafe-2.1.1-py311h5eee18b_0 
+#12 310.4   matplotlib-base    pkgs/main/linux-64::matplotlib-base-3.8.0-py311ha02d727_0 
+#12 310.4   mkl                pkgs/main/linux-64::mkl-2023.1.0-h213fc3f_46344 
+#12 310.4   mkl-service        pkgs/main/linux-64::mkl-service-2.4.0-py311h5eee18b_1 
+#12 310.4   mkl_fft            pkgs/main/linux-64::mkl_fft-1.3.8-py311h5eee18b_0 
+#12 310.4   mkl_random         pkgs/main/linux-64::mkl_random-1.2.4-py311hdb19cb5_0 
+#12 310.4   mlflow             pkgs/main/linux-64::mlflow-2.6.0-py311h0389eee_0 
+#12 310.4   munkres            pkgs/main/noarch::munkres-1.1.4-py_0 
+#12 310.4   numexpr            pkgs/main/linux-64::numexpr-2.8.7-py311h65dcdc2_0 
+#12 310.4   numpy              pkgs/main/linux-64::numpy-1.24.3-py311h08b1b3b_1 
+#12 310.4   numpy-base         pkgs/main/linux-64::numpy-base-1.24.3-py311hf175353_1 
+#12 310.4   oauthlib           pkgs/main/linux-64::oauthlib-3.2.2-py311h06a4308_0 
+#12 310.4   openjpeg           pkgs/main/linux-64::openjpeg-2.4.0-h3ad879b_0 
+#12 310.4   orc                pkgs/main/linux-64::orc-1.7.4-hb3bc3d3_1 
+#12 310.4   pandas             pkgs/main/linux-64::pandas-2.1.1-py311ha02d727_0 
+#12 310.4   pillow             pkgs/main/linux-64::pillow-10.0.1-py311ha6cbd5a_0 
+#12 310.4   protobuf           pkgs/main/linux-64::protobuf-3.20.3-py311h6a678d5_0 
+#12 310.4   pyarrow            pkgs/main/linux-64::pyarrow-11.0.0-py311hd8e8d9b_1 
+#12 310.4   pyjwt              pkgs/main/linux-64::pyjwt-2.4.0-py311h06a4308_0 
+#12 310.4   pymysql            pkgs/main/linux-64::pymysql-1.0.2-py311h06a4308_1 
+#12 310.4   pyparsing          pkgs/main/linux-64::pyparsing-3.0.9-py311h06a4308_0 
+#12 310.4   python-dateutil    pkgs/main/noarch::python-dateutil-2.8.2-pyhd3eb1b0_0 
+#12 310.4   python-tzdata      pkgs/main/noarch::python-tzdata-2023.3-pyhd3eb1b0_0 
+#12 310.4   pytz               pkgs/main/linux-64::pytz-2023.3.post1-py311h06a4308_0 
+#12 310.4   pyyaml             pkgs/main/linux-64::pyyaml-6.0.1-py311h5eee18b_0 
+#12 310.4   querystring_parser pkgs/main/linux-64::querystring_parser-1.2.4-py311h06a4308_0 
+#12 310.4   re2                pkgs/main/linux-64::re2-2022.04.01-h295c915_0 
+#12 310.4   s3transfer         pkgs/main/linux-64::s3transfer-0.7.0-py311h06a4308_0 
+#12 310.4   scikit-learn       pkgs/main/linux-64::scikit-learn-1.3.0-py311ha02d727_0 
+#12 310.4   scipy              pkgs/main/linux-64::scipy-1.11.3-py311h08b1b3b_0 
+#12 310.4   six                pkgs/main/noarch::six-1.16.0-pyhd3eb1b0_1 
+#12 310.4   smmap              pkgs/main/noarch::smmap-4.0.0-pyhd3eb1b0_0 
+#12 310.4   snappy             pkgs/main/linux-64::snappy-1.1.9-h295c915_0 
+#12 310.4   sqlalchemy         pkgs/main/linux-64::sqlalchemy-2.0.21-py311h5eee18b_0 
+#12 310.4   sqlparse           pkgs/main/linux-64::sqlparse-0.4.4-py311h06a4308_0 
+#12 310.4   tabulate           pkgs/main/linux-64::tabulate-0.9.0-py311h06a4308_0 
+#12 310.4   tbb                pkgs/main/linux-64::tbb-2021.8.0-hdb19cb5_0 
+#12 310.4   threadpoolctl      pkgs/main/noarch::threadpoolctl-2.2.0-pyh0d69192_0 
+#12 310.4   typing-extensions  pkgs/main/linux-64::typing-extensions-4.7.1-py311h06a4308_0 
+#12 310.4   typing_extensions  pkgs/main/linux-64::typing_extensions-4.7.1-py311h06a4308_0 
+#12 310.4   utf8proc           pkgs/main/linux-64::utf8proc-2.6.1-h27cfd23_0 
+#12 310.4   websocket-client   pkgs/main/linux-64::websocket-client-0.58.0-py311h06a4308_4 
+#12 310.4   werkzeug           pkgs/main/linux-64::werkzeug-2.2.3-py311h06a4308_0 
+#12 310.4   yaml               pkgs/main/linux-64::yaml-0.2.5-h7b6447c_0 
+#12 310.4   zipp               pkgs/main/linux-64::zipp-3.11.0-py311h06a4308_0 
+#12 310.4 
+#12 310.4 The following packages will be UPDATED:
+#12 310.4 
+#12 310.4   certifi                         2023.7.22-py311h06a4308_0 --> 2023.11.17-py311h06a4308_0 
+#12 310.4 
+#12 310.4 
+#12 310.4 Proceed ([y]/n)? 
+#12 629.1 
+#12 629.1 Downloading and Extracting Packages: ...working... done
+#12 629.1 Preparing transaction: ...working... done
+#12 640.1 Verifying transaction: ...working... done
+#12 648.4 Executing transaction: ...working... 
+#12 678.6 
+#12 678.6     Installed package of scikit-learn can be accelerated using scikit-learn-intelex.
+#12 678.6     More details are available here: https://intel.github.io/scikit-learn-intelex
+#12 678.6 
+#12 678.6     For example:
+#12 678.6 
+#12 678.6         $ conda install scikit-learn-intelex
+#12 678.6         $ python -m sklearnex my_application.py
+#12 678.6 
+#12 678.6     
+#12 678.6 
+#12 678.6 done
+#12 DONE 684.4s
+
+#13 [8/8] RUN bash 1.sh
+#13 15.36 Hello Netology
+#13 DONE 15.4s
+
+#14 exporting to image
+#14 exporting layers
+#14 exporting layers 70.0s done
+#14 writing image sha256:461cd2b61d050802b6053879ea4f3586f3d7524ef236904762e63aee0097bd81 done
+#14 naming to docker.io/library/netology-ml:netology-ml 0.0s done
+#14 DONE 70.1s
+
+What's Next?
+  View a summary of image vulnerabilities and recommendations → docker scout quickview
