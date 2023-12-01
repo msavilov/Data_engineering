@@ -1,0 +1,3 @@
+[all]
+node01 ansible_host=84.252.138.186 ansible_user=ansible ansible_password=ansible
+node02 ansible_host=51.250.101.1 ansible_user=ansible ansible_password=ansible

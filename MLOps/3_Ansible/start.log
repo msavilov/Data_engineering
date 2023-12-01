@@ -1,0 +1,37 @@
+PLAY [netology-ml] *************************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [node01]
+ok: [node02]
+
+TASK [Task Ping] ***************************************************************
+ok: [node02]
+ok: [node01]
+
+TASK [Update Apt] **************************************************************
+changed: [node02]
+changed: [node01]
+
+TASK [Install Packages] ********************************************************
+ok: [node02]
+ok: [node01]
+
+TASK [Copy File] ***************************************************************
+changed: [node01]
+changed: [node02]
+
+TASK [Create Group] ************************************************************
+changed: [node01] => (item=devops_1)
+changed: [node02] => (item=devops_1)
+changed: [node01] => (item=test_1)
+changed: [node02] => (item=test_1)
+
+TASK [Create Users] ************************************************************
+changed: [node01] => (item={'user_name': 'devops_1', 'home_dir': 'devops_1'})
+changed: [node02] => (item={'user_name': 'devops_1', 'home_dir': 'devops_1'})
+changed: [node01] => (item={'user_name': 'test_1', 'home_dir': 'test_1'})
+changed: [node02] => (item={'user_name': 'test_1', 'home_dir': 'test_1'})
+
+PLAY RECAP *********************************************************************
+node01                     : ok=7    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+node02                     : ok=7    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
