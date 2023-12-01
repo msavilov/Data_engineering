@@ -1,0 +1,23 @@
+stages:          
+  - build
+  - test
+
+build-job:       
+  stage: build
+  script:
+    - echo "Building"
+    - mkdir build
+    - touch info.txt
+  tags: 
+    - netology
+
+test-job:   
+  stage: test    
+  script:
+    - echo "Testing"
+    - if [ -f info.txt ];
+      then echo "File info.txt exists";
+      else echo "File info.txt doesn't exits";
+      fi
+  tags: 
+    - netology
