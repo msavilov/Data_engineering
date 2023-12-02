@@ -17,5 +17,5 @@ export MLFLOW_S3_ENDPOINT_URL=http://localhost:9000
 mlflow models serve -m S3://mlflow/0/98bdf6ec158145908af39f86156c347f/artifacts/model -p 1234
 
 
-###**Решение**
+### **Решение**
 ![MLflow](https://github.com/msavilov/Data_engineering/blob/main/MLOps/6_MLflow/MLflow.png)
