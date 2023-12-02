@@ -9,7 +9,7 @@
 2. Устанавливаем и настраиваем python3
 3. Устанавливаем и настраиваем mlflow (Важно! Модель старая, поэтому лучше всего устанавливать mlflow 1 поколения, например, версию 1.20, и не скупитесь на память для инструмента, не меньше 6-8 GB должно быть только для него)
 4. Настраиваем переменные:
-export MLFLOW_TRACKING_URI=http://localhost
+export MLFLOW_TRACKING_URI=http://localhost:5000
 export MLFLOW_S3_ENDPOINT_URL=http://localhost:9000
 5. Настраиваем MinIO
 6. Берём модель отсюда [https://github.com/vppuzakov/mlflow-example]
