@@ -15,6 +15,15 @@ wget https://download.pytorch.org/models/densenet161-8d451a50.pth
 6. Стартуем сервер из под torchserve-dashboard с параметром
 --config_path ./torchserve.properties --model_store ./model_store --server.port 8501 -- --config_path ./torchserve.properties
 
+
 ### **Решение**
 
-![torchserve-dashboard]()
+Оба варианта установки torchserve-dashboard не привели к успеху:
+
+1) устновка через pip валится при запуске с ошибкой "TypeError: main_run() got multiple values for argument 'target'" - по всей видимости есть какой-то конфликт с версиями окружения
+
+2) запуск через streamlit позволяет загрузить сам веб-интерфейс
+
+![torchserve-dashboard](https://github.com/msavilov/Data_engineering/blob/main/MLOps/7_Deploy_ML/torchserve-dashboard.png)
+
+Но при попытке его запусти Torchserve валится с ошибками в Java на версиях 11 и 17.
