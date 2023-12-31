@@ -18,4 +18,7 @@ mlflow models serve -m S3://mlflow/0/98bdf6ec158145908af39f86156c347f/artifacts/
 
 
 ### **Решение**
+
+При обучении модели mlflow models serve валится 
+
 ![MLflow](https://github.com/msavilov/Data_engineering/blob/main/MLOps/6_MLflow/MLflow.png)
